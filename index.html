@@ -207,7 +207,7 @@
 var dataset;
 
 d3.csv("https://docs.google.com/spreadsheet/pub?key=0Al4JlQtMUZw2dGpGZ05sYUtWZGlsc0pkcmNhZWx4cXc&single=true&gid=0&output=csv", function(data) {
-  dataset = data;
+  dataset = data.toString;
   tabulate(data, ["Methods",	"After",	"Year" ,	"Notes" ,	"Category"]);
 });
 
