@@ -37,6 +37,21 @@
   </style>
   <script type="text/javascript">
     window.onload = function() {
+     var data;
+     d3.csv("https://docs.google.com/spreadsheet/pub?key=0Al4JlQtMUZw2dGpGZ05sYUtWZGlsc0pkcmNhZWx4cXc&single=true&gid=0&output=csv", function(data) {
+ //Hand CSV data off to global var,
+ //so it's accessible later.
+ dataset = data;
+ //Call some other functions that
+ //generate your visualization, e.g.:
+// generateVisualization();
+// makeAwesomeCharts();
+ //makeEvenAwesomerCharts();
+ // thankAwardsCommittee();
+});
+
+      
+      
       var testData = [
         {times: [{"starting_time": 1355752800000, "ending_time": 1355759900000}, {"starting_time": 1355767900000, "ending_time": 1355774400000}]},
         {times: [{"starting_time": 1355759910000, "ending_time": 1355761900000}, ]},
