@@ -221,7 +221,7 @@ TableSort(
         { text: 'Notes', sort: TableSort.alphabet },
         { text: 'Category', sort: TableSort.alphabet, sort_column: true }
     ],
-         dataset,
+         d3.values(dataset),
         { width: '400px', height: '700px' }
         );
     
