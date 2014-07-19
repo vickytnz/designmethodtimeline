@@ -7,6 +7,7 @@ Get something that looks like
 
 for a dataset that looks like
 
+
 ```js
 var testData = [
   {label: "person a", times: [
