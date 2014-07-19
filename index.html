@@ -202,9 +202,27 @@
     
     return table;
 }
+
+var dataset;
+
 d3.csv("https://docs.google.com/spreadsheet/pub?key=0Al4JlQtMUZw2dGpGZ05sYUtWZGlsc0pkcmNhZWx4cXc&single=true&gid=0&output=csv", function(data) {
+  dataset = data;
   tabulate(data, ["Methods",	"After",	"Year" ,	"Notes" ,	"Category"]);
 });
+
+
+TableSort(
+        "mytable",
+            [
+        { text: 'Methods', sort: TableSort.alphabet },
+        { text: 'After', sort: TableSort.alphabet },
+        { text: 'Year', sort: TableSort.numeric, sort_column: true }
+        { text: 'Notes', sort: TableSort.alphabet },
+        { text: 'Category', sort: TableSort.alphabet, sort_column: true }
+    ],
+         dataset,
+        { width: '400px', height: '700px' }
+        );
     
   </script>
 </head>
@@ -251,5 +269,7 @@ d3.csv("https://docs.google.com/spreadsheet/pub?key=0Al4JlQtMUZw2dGpGZ05sYUtWZGl
     <div width="100%" id="timelineRelativeTime"></div>
   </div>
 <div id="container"></div>
+<table id="mytable" ></table>
+  
 </body>
 </html>
